@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundle Builder - Buy 3 and Save 30%</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Buy 3 and Save 30%</h1>
+        </header>
+
+        <main class="main-content">
+            <section class="product-grid" id="productGrid">
+                <!-- Products will be dynamically inserted here -->
+            </section>
+            <aside class="bundle-sidebar">
+                <div class="sidebar-content">
+                    <h2>Create a Bundle</h2>
+                    <p class="instruction-text">Add at least 3 products and Save 30%</p>
+                    
+                    <div class="bundle-progress">
+                        <div class="progress-indicator">
+                            <span class="progress-count" id="progressCount">0</span> / 3 items minimum
+                        </div>
+                        <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+                    </div>
+
+                    <div class="selected-products" id="selectedProducts">
+                        <div class="empty-state" id="emptyState">
+                            <p>No products selected yet</p>
+                        </div>
+                    </div>
+
+                    <div class="bundle-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                            <span>Discount (30%):</span>
+                            <span id="discountAmount">-$0.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="totalAmount">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary btn--full-width" id="proceedButton" disabled>
+                        Add <span id="remainingItems">3</span> Items to Proceed
+                    </button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
